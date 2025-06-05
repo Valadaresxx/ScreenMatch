@@ -48,9 +48,9 @@ public class Title {
     }
 
     public void technicalSheet(){
-        System.out.println("Nome: " + name);
-        System.out.println("Duração: " + duration);
-        System.out.println("Ano de Lançamento: " + releaseYear);
+        System.out.println("Nome: " + getName());
+        System.out.println("Duração: " + getDuration());
+        System.out.println("Ano de Lançamento: " + getReleaseYear());
         System.out.println("Total de avaliações: " + getTotalNotes());
         System.out.println("Avaliação media do filme: " + average());
     }
