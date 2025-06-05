@@ -1,6 +1,5 @@
 package br.com.valadares.screenmatch.models;
 
-public class Film extends Title {
-
+public class Serie extends Title{
 
 }

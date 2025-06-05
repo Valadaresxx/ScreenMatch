@@ -1,4 +1,5 @@
 import br.com.valadares.screenmatch.models.Film;
+import br.com.valadares.screenmatch.models.Serie;
 
 public class Main {
     public static void main(String[] args){
@@ -13,5 +14,6 @@ public class Main {
 
         film1.technicalSheet();
         System.out.println(film1.average());
+        Serie serie1 = new Serie();
     }
 }
