@@ -1,4 +1,5 @@
 import br.com.valadares.screenmatch.calculator.Calculator;
+import br.com.valadares.screenmatch.calculator.FilterRecommendation;
 import br.com.valadares.screenmatch.models.Film;
 import br.com.valadares.screenmatch.models.Serie;
 
@@ -29,6 +30,7 @@ public class Main {
         serie1.setEpisodeForSeason(22);
         serie1.setReleaseYear(2006);
         serie1.setDurationForEpisode(22);
+        serie1.sumNotes(10);
 
         serie1.technicalSheet();
 
@@ -36,5 +38,8 @@ public class Main {
         c.inclui(serie1);
         c.inclui(film1);
         System.out.println(c.getHours());
+
+        FilterRecommendation filter = new FilterRecommendation();
+        filter.filter(film1);
     }
 }
