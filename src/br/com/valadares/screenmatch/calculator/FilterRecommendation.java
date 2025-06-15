@@ -1,16 +1,18 @@
 package br.com.valadares.screenmatch.calculator;
 
 public class FilterRecommendation {
-    private String recommendation;
 
     public void filter(Classifiable c){
-        if (c.getClassification() >=4){
-            System.out.println("entre os preferidos");
-
+        if (c.getClassification() == 5){
+            System.out.println("Classificação 5 Estrelas - *****");
+        }else if(c.getClassification() >= 4){
+            System.out.println("Classificação 4 Estrelas - ****");
+        }else if(c.getClassification() >= 3){
+            System.out.println("Classificação 3 Estrelas - ***");
         }else if(c.getClassification() >= 2){
-            System.out.println("Está em alta");
+            System.out.println("Classificação 2 Estrelas - **");
         }else{
-            System.out.println("Coloque na lista para assistir");
+            System.out.println("Classificação 1 Estrela - *");
         }
 
 
