@@ -1,41 +1,29 @@
 package br.com.valadares.screenmatch.models;
 
 public class Serie extends Title{
-    private int season;
-    private int episodeForSeason;
-    private int durationForEpisode;
+    private final int season;
+    private final int episodeForSeason;
+    private final int durationForEpisode;
     private boolean active;
+
+    public Serie(String name, double duration, int releaseYear, int season, int episodeForSeason, int durationForEpisode) {
+        super(name, duration, releaseYear);
+        this.season = season;
+        this.episodeForSeason = episodeForSeason;
+        this.durationForEpisode = durationForEpisode;
+    }
 
     public int getSeason() {
         return season;
     }
-
-    public void setSeason(int season) {
-        this.season = season;
-    }
-
     public int getEpisodeForSeason() {
         return episodeForSeason;
     }
-
-    public void setEpisodeForSeason(int episodeForSeason) {
-        this.episodeForSeason = episodeForSeason;
-    }
-
     public boolean isActive() {
         return active;
     }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
     public int getDurationForEpisode() {
         return durationForEpisode;
-    }
-
-    public void setDurationForEpisode(int durationForEpisode) {
-        this.durationForEpisode = durationForEpisode;
     }
 
     @Override

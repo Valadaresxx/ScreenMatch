@@ -1,22 +1,16 @@
 package br.com.valadares.screenmatch.models;
 
 public class Title {
-    private String name;
-    private double duration;
-    private int releaseYear;
+    private final String name;
+    private final double duration;
+    private final int releaseYear;
     private double amountOfNote;
     private int totalNotes;
     private double averageRating;
 
-    public void setName(String name) {
+    public Title(String name, double duration, int releaseYear) {
         this.name = name;
-    }
-
-    public void setDuration(double duration) {
         this.duration = duration;
-    }
-
-    public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
 
@@ -35,7 +29,6 @@ public class Title {
     public int getTotalNotes(){
         return totalNotes;
     }
-
 
     public void sumNotes(double note){
         amountOfNote += note;
