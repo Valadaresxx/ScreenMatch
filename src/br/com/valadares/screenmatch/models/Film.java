@@ -4,7 +4,7 @@ import br.com.valadares.screenmatch.calculator.Classifiable;
 public class Film extends Title implements Classifiable {
     private final String director;
 
-    public Film(String name, double duration, int releaseYear, String director) {
+    public Film(String name, int duration, int releaseYear, String director) {
         super(name, duration, releaseYear);
         this.director = director;
     }

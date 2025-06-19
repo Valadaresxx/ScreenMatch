@@ -6,7 +6,7 @@ public class Serie extends Title{
     private final int durationForEpisode;
     private boolean active;
 
-    public Serie(String name, double duration, int releaseYear, int season, int episodeForSeason, int durationForEpisode) {
+    public Serie(String name, int duration, int releaseYear, int season, int episodeForSeason, int durationForEpisode) {
         super(name, duration, releaseYear);
         this.season = season;
         this.episodeForSeason = episodeForSeason;

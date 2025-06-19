@@ -3,18 +3,24 @@ package br.com.valadares.screenmatch.models;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
-    @SerializedName("Title")
+//    @SerializedName("Title")
     private final String name;
-    private final double duration;
+    private final int duration;
     private final int releaseYear;
     private double amountOfNote;
     private int totalNotes;
     private double averageRating;
 
-    public Title(String name, double duration, int releaseYear) {
+    public Title(String name, int duration, int releaseYear) {
         this.name = name;
         this.duration = duration;
         this.releaseYear = releaseYear;
+    }
+
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+        this.releaseYear = Integer.valueOf(myTitleOmdb.year());
+        this.duration = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
     }
 
     public String getName() {
@@ -56,10 +62,10 @@ public class Title implements Comparable<Title> {
     @Override
     public String toString() {
         return "Title{" +
-                "Nome:" + name + '\'' +
-//                ", duration=" + duration +
-                "- Ano de Lançamento: (" + releaseYear +
+                "Nome:" + name+
+                ", Ano de Lançamento: (" + releaseYear +
                 ")"+
+                ", Duração = " + duration +
 //                ", amountOfNote=" + amountOfNote +
 //                ", totalNotes=" + totalNotes +
 //                ", averageRating=" + averageRating +
