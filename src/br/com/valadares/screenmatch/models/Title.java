@@ -1,6 +1,9 @@
 package br.com.valadares.screenmatch.models;
 
-public class Title {
+import com.google.gson.annotations.SerializedName;
+
+public class Title implements Comparable<Title> {
+    @SerializedName("Title")
     private final String name;
     private final double duration;
     private final int releaseYear;
@@ -47,7 +50,24 @@ public class Title {
         System.out.println("Ano de Lançamento: " + getReleaseYear());
         System.out.println("Total de avaliações: " + getTotalNotes());
         System.out.println("------------------------");
-
         //  System.out.println("Avaliação media do filme: " + average());
+    }
+
+    @Override
+    public String toString() {
+        return "Title{" +
+                "Nome:" + name + '\'' +
+//                ", duration=" + duration +
+                "- Ano de Lançamento: (" + releaseYear +
+                ")"+
+//                ", amountOfNote=" + amountOfNote +
+//                ", totalNotes=" + totalNotes +
+//                ", averageRating=" + averageRating +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Title o) {
+        return this.getName().compareTo(o.getName());
     }
 }

@@ -31,6 +31,16 @@ public class Serie extends Title{
         return season*episodeForSeason*durationForEpisode;
 
     }
+
+//    @Override
+//    public String toString() {
+//        return "Serie{" +
+//                "season=" + season +
+//                ", episodeForSeason=" + episodeForSeason +
+//                ", durationForEpisode=" + durationForEpisode +
+//                ", active=" + active +
+//                '}';
+//    }
 }
 
 

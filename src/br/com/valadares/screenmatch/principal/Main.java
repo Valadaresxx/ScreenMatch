@@ -1,4 +1,5 @@
-import br.com.valadares.screenmatch.calculator.Calculator;
+package br.com.valadares.screenmatch.principal;
+
 import br.com.valadares.screenmatch.calculator.FilterRecommendation;
 import br.com.valadares.screenmatch.models.Film;
 import br.com.valadares.screenmatch.models.Serie;

@@ -18,8 +18,10 @@ public class Film extends Title implements Classifiable {
         return (int) average() / 2;
     }
 
-    @Override
-    public String toString() {
-        return this.getName() + " (" + this.getReleaseYear() + ")";
-    }
+//    @Override
+//    public String toString() {
+//        return "Film{" +
+//                "director='" + director + '\'' +
+//                '}';
+//    }
 }
