@@ -1,9 +1,8 @@
 package br.com.valadares.screenmatch.models;
 
-import com.google.gson.annotations.SerializedName;
+import br.com.valadares.screenmatch.exceptions.ErrorFormatYear;
 
 public class Title implements Comparable<Title> {
-//    @SerializedName("Title")
     private final String name;
     private final int duration;
     private final int releaseYear;
@@ -19,8 +18,12 @@ public class Title implements Comparable<Title> {
 
     public Title(TitleOmdb myTitleOmdb) {
         this.name = myTitleOmdb.title();
+        if(myTitleOmdb.year().length() > 4 ){
+            throw new ErrorFormatYear("O ano está errado!");
+        }else{
         this.releaseYear = Integer.valueOf(myTitleOmdb.year());
-        this.duration = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
+            this.duration = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
+        }
     }
 
     public String getName() {
